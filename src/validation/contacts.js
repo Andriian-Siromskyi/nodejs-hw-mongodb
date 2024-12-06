@@ -9,7 +9,7 @@ export const createContactSchema = Joi.object({
     .pattern(/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s0-9]*$/)
     .required(),
   email: Joi.string().email(),
-  isFavourite: Joi.boolean(),
+  isFavourite: Joi.boolean().required(),
   contactType: Joi.string().valid(...typeList),
 });
 
